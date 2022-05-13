@@ -11,7 +11,7 @@ public class GamePanel extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 1L;
 
 	static final int SCREEN_WIDTH = 800;
-	static final int SCREEN_HEIGHT = 800;
+	static final int SCREEN_HEIGHT = 600;
 	static final int OBJECTS_SIZE = 25; // size of each object on the screen
 	static final int GAME_OBJECTS = (SCREEN_WIDTH * SCREEN_HEIGHT) / OBJECTS_SIZE; // how many objects can be on screen
 	static final int DELAY = 100; // delay for the movement of the game
@@ -153,6 +153,10 @@ public class GamePanel extends JPanel implements ActionListener {
 		g.setFont(new Font("Ink free", Font.BOLD, 75));
 		FontMetrics metrics2 = getFontMetrics(g.getFont());
 		g.drawString("Game Over!", (SCREEN_WIDTH - metrics2.stringWidth("Game Over!")) / 2, SCREEN_HEIGHT / 2);
+		g.setColor(Color.white);
+		g.setFont(new Font("Ink free", Font.BOLD, 40));
+		FontMetrics metrics3 = getFontMetrics(g.getFont());
+		g.drawString("Restart in: not yet an option :(", (SCREEN_WIDTH - metrics3.stringWidth("Restart in: not yet an option :(")) / 2, SCREEN_HEIGHT / 2 + 100);
 
 	}
 

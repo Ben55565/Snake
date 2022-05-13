@@ -9,12 +9,14 @@ public class GameFrame extends JFrame {
 	public GameFrame() {
 		this.add(new GamePanel()); // create frame
 		this.setTitle("Snake"); // give the window a name
+		this.requestFocus();
+		this.requestFocusInWindow();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // close program on exit
 		this.setResizable(false); // set so it wont be possible to enlarge frame
 		this.pack();
 		this.setVisible(true);
 		this.setLocationRelativeTo(null);
-		requestFocus();
+		
 	}
 
 }
